@@ -1,0 +1,34 @@
+{
+  "name": "silex-twig-hello-world",
+  "packaging": {
+    "type": "pac_nginx",
+    "requires": [
+      "cosmos-ca-chains",
+      "cosmos-ca-tools"
+    ],
+    "conf": {
+      "comment": "We're targeting c3.xlarge instances",
+
+      "ssl.ssl_client_cert": "service-devs",
+      "ssl.verify_client": "on",
+      "ssl.verify_crl": true,
+
+      "opcache.max_accelerated_files": 7963,
+      "opcache.memory_consumption": 64,
+      "opcache.interned_strings_buffer": 16,
+      "memory_limit": "128m",
+      "max_execution_time": 30,
+
+      "fpm.mode": "ondemand",
+      "fpm.process_idle_timeout": "10s",
+      "fpm.max_children": 324,
+      "fpm.start_servers": 32,
+      "fpm.min_spare_servers": 16,
+      "fpm.max_spare_servers": 48,
+      "fpm.max_requests": 50,
+
+      "nginx.worker_processes": 4,
+      "nginx.worker_connections": 1024
+    }
+  }
+}

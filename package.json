@@ -1,0 +1,11 @@
+{
+  "name": "silex-twig-hello-world",
+  "version": "0.0.1",
+  "description": "Testing the beauty of Silex & Twig",
+  "author": "Craig Harvie",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  }
+}
